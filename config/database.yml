@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: pictgram_production
+  database: postgresql
   username: pictgram
-  password: <%= ENV['PICTGRAM_DATABASE_PASSWORD'] %>
+  encoding: unicode
+  pool: 5
+  
